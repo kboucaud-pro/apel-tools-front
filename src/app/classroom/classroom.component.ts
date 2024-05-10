@@ -41,7 +41,7 @@ export class ClassroomComponent implements OnInit {
         })).subscribe();
   }
 
-  onSubmitForm() {
+  onSubmitForm(form: NgForm) {
     if (this.classroomName.length > 0) {
       this.classroomService.postNewClassroom(this.classroomName).pipe(map((element) => {
         this.classroomList.push(element);
