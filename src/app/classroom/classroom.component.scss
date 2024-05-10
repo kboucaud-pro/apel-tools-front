@@ -1,0 +1,41 @@
+.classroom-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	form {
+		display: flex;
+		flex-direction: row;
+		gap: 20px;
+
+		button {
+			background-color: #18b4b4;
+			color: white;
+			padding: 10px 20px 10px 20px;
+			border: none;
+			border-radius: 10px;
+			margin-right: 50px;
+		}
+	}
+}
+
+.body-list {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	font-size: 20px;
+
+	.pair-line {
+		padding: 10px 0px 10px 20px;
+		background-color: #f0ffff;
+		width: 100%;
+		display: inline-block;
+	}
+
+	.impair-line {
+		padding: 10px 0px 10px 20px;
+		background-color: #bef6f6;
+		width: 100%;
+		display: inline-block;
+	}
+}

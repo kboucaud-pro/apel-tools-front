@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+
+html {
+	height: 100%;
+	width: 100%;
+
+	body {
+		height: 100%;
+		width: 100%;
+		margin: 0;
+
+		app-root {
+			height: 100%;
+			width: 100%;
+
+			app-left-menu {
+				height: 100%;
+				width: 15%;
+				margin: 0;
+			}
+
+			app-classroom {
+				height: 100%;
+				width: 85%;
+				margin: 0;
+			}
+		}
+	}
+}
