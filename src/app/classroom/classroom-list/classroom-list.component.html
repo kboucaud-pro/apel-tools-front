@@ -7,6 +7,6 @@
 </div>
 <div class="body-list">
 	<span *ngFor="let classroom of classroomList ; index as i;">
-		<span [ngClass]="{'pair-line': i % 2 == 0, 'impair-line': i % 2 == 1}">{{ classroom.name}}</span>
+		<span [ngClass]="{'pair-line': i % 2 == 0, 'impair-line': i % 2 == 1}">{{ classroom.name}}<a [routerLink]="['/classroom', classroom.id]"><fa-icon class="line-icon" [icon]="faGroup"></fa-icon></a></span>
 	</span>
 </div>

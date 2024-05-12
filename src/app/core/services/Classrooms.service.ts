@@ -1,7 +1,8 @@
 import { HttpClient, HttpErrorResponse } from "@angular/common/http";
-import { Injectable } from "@angular/core";
+import { Inject, Injectable } from "@angular/core";
 import { Classroom } from "../models/Classroom.model";
-import { Observable, catchError, throwError } from "rxjs";
+import { Observable, catchError, map, tap, throwError } from "rxjs";
+import { environment } from "../../../environments/environment";
 
 @Injectable({
 	providedIn: 'root'
@@ -13,7 +14,13 @@ export class ClassroomsService {
 	}
 
 	public getAllClassrooms(): Observable<Classroom[]> {
-		return this.http.get<Classroom[]>('/api/classroom').pipe(
+		return this.http.get<Classroom[]>(`/api/classroom`).pipe(
+			catchError(this.handleError)
+		);
+	}
+
+	public getClassroomById(id: number): Observable<Classroom> {
+		return this.http.get<Classroom>(`/api/classroom/${id}`).pipe(
 			catchError(this.handleError)
 		);
 	}

@@ -28,14 +28,20 @@
 	.pair-line {
 		padding: 10px 0px 10px 20px;
 		background-color: #f0ffff;
-		width: 100%;
-		display: inline-block;
+		display: flex;
+		justify-content: space-between;
+
 	}
 
 	.impair-line {
 		padding: 10px 0px 10px 20px;
 		background-color: #bef6f6;
-		width: 100%;
-		display: inline-block;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.line-icon {
+		color: #18b4b4;
+		margin-right: 20px;
 	}
 }
